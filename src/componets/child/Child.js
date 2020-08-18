@@ -6,7 +6,7 @@ function Child(){
 
     return(
         <div>
-            Welcome {name}
+            Welcome {name}!
 
         </div>
     )
