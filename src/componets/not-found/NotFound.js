@@ -10,7 +10,8 @@ class NotFound extends Component {
     render(){
         return(
             <div className="NotFound">
-                Opps: This Page is under Quarantine! 
+                <h1>Opps: This page doesn't exist! 
+                </h1>
             </div>
         )
     }
