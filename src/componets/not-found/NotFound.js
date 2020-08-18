@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 
 
-function NotFound(props) {
-    return (
-        <div className="NotFound">
-            Opps: The Page You Are Looking For is in Quarantine!
-        </div>
-    );
+class NotFound extends Component {
+    constructor (props) {
+        super(props);
+    }
+
+    render(){
+        return(
+            <div className="NotFound">
+                Opps: This Page is under Quarantine! 
+            </div>
+        )
+    }
 
 }
 

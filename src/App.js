@@ -5,7 +5,7 @@ import Clock from './componets/clock/Clock';
 import Contact from './componets/contact/Contact';
 import {Route, Switch} from "react-router-dom";
 import Navigation from './componets/navigation/Navigation';
-import NotFound from './componets/not-found/NotFound';
+import Child from './componets/child/Child';
 
 
 
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Navigation/>
-      <Switch></Switch>
+      
       <Route exact 
       path="/"
       render={(props) => <Welcome {...props} name="Katrine" />}
@@ -28,10 +28,12 @@ function App() {
       path="/contact" 
       component= {Contact}/>
 
-      <Route 
-      path="/404"
-      component={NotFound}/>
-      <Switch/>
+      <Switch>
+      <Route
+      path="/welcome/:name"
+      children={<Child/>}
+      />
+      </Switch>
     </div>
   );
     
