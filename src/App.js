@@ -7,6 +7,7 @@ import {Route, Switch} from "react-router-dom";
 import Navigation from './componets/navigation/Navigation';
 import Child from './componets/child/Child';
 import NotFound from './componets/not-found/NotFound';
+import Jeopardy from './componets/jeopardy/Jeopardy';
 
 
 
@@ -30,12 +31,19 @@ function App() {
       path="/clock" 
       component= {Clock}/>
 
-      <Route 
+      <Route
       path="/contact" 
       component= {Contact}/>
 
+      <Route exact
+      path="/jeopardy"
+      component={Jeopardy}/>
+      
       <Route
       component={NotFound}/>
+
+      
+      
       
       </Switch>
     </div>
