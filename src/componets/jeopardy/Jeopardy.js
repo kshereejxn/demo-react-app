@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import JeopardyService from "../../jeopardyService";
+import Guess from '../guess/Guess';
+
+
 
 class Jeopardy extends Component {
   //set our initial state and set up our service as this.client on this component
@@ -23,6 +26,8 @@ class Jeopardy extends Component {
   componentDidMount() {
     this.getNewQuestion();
   }
+
+
  
   render() {
     let category ="loading";
@@ -30,13 +35,16 @@ class Jeopardy extends Component {
     if (this.state.data.category){
       category = this.state.data.category.title
     }
+
+    
     
     return (
       <div>
         <strong>Question: </strong> {this.state.data.question} <br/>
         <strong>Value: </strong> {this.state.data.value} <br/>
         <strong>Category: </strong> {category} <br/>
-        <strong>Score: </strong> {this.state.score}
+        <strong>Score: </strong> {this.state.score} <br/>
+        <strong><Guess/></strong>
      </div>
     );
   }
